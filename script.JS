@@ -81,136 +81,118 @@ proteger o futuro do planeta."
          ]
     },
     {
-         enunciado: "2 - Quais são alguns dos efeitos imediatos das mudanças    (TERMINAR DE MODIFICAR!!!)
+         enunciado: "2 - Quais são alguns dos efeitos imediatos das mudanças
 climáticas em diferentes regiões do mundo?",
-alternativas: [
-{
-texto: "a) Aumento das temperaturas médias",
-afirmacao:["O aumento das temperaturas médias é um efeito
-
+         alternativas: [
+             {
+                 texto: "a) Aumento das temperaturas médias",
+                 afirmacao:["O aumento das temperaturas médias é um efeito
 imediato das mudanças climáticas. ",
-
-"Este aumento pode levar a ondas de calor mais
-
+                           "Este aumento pode levar a ondas de calor mais
 frequentes e intensas."
-]
-},
-{
-texto: "b) Aumento da frequência de eventos climáticos
-
+                ]
+            },
+            {
+                texto: "b) Aumento da frequência de eventos climáticos
 extremos",
 
-afirmacao: ["A maior frequência de eventos climáticos
-
+                afirmacao: ["A maior frequência de eventos climáticos
 extremos é um impacto direto das mudanças climáticas. ",
-
-"Esses eventos incluem furacões, inundações e
-
+                           "Esses eventos incluem furacões, inundações e
 secas mais severas."
-]
-},
-{
-texto: "c) Acidificação dos oceanos",
-afirmacao: ["A acidificação dos oceanos é uma consequência
-
+                ]
+            },
+            {
+                texto: "c) Acidificação dos oceanos",
+                afirmacao: ["A acidificação dos oceanos é uma consequência
 das mudanças climáticas. ",
-
-"Este fenômeno afeta a vida marinha,
+                           "Este fenômeno afeta a vida marinha,
 especialmente os corais e as espécies que dependem deles."
-
-]
-},
-{
-texto: "d) Todas as opções acima",
-afirmacao: ["Todos os efeitos mencionados são impactos
-
+                ]
+            },
+            {
+                 texto: "d) Todas as opções acima",
+                 afirmacao: ["Todos os efeitos mencionados são impactos
 imediatos das mudanças climáticas. ",
-
-"Esses efeitos combinados têm consequências
-
+                            "Esses efeitos combinados têm consequências
 graves para ecossistemas e populações humanas."
-
-]
-}
-]
-},
-{
-enunciado: "3 - Que medidas estão sendo tomadas globalmente para
+                ]
+            }
+        ]
+    },
+    {
+        enunciado: "3 - Que medidas estão sendo tomadas globalmente para
 mitigar as mudanças climáticas?",
-alternativas: [
-{
-texto: "a) Investimento em energias renováveis",
-afirmacao: ["O investimento em energias renováveis é uma
-
+        alternativas: [
+                    {
+                texto: "a) Investimento em energias renováveis",
+                afirmacao: ["O investimento em energias renováveis é uma
 das principais medidas para mitigar as mudanças climáticas. ",
-
-"Fontes como solar e eólica são fundamentais
-
+                           "Fontes como solar e eólica são fundamentais
 para uma economia de baixo carbono.".
-
-]
-},
-{
-texto: "b) Implementação de políticas de conservação
-
+                ]
+            },
+            {
+                texto: "b) Implementação de políticas de conservação
 ambiental",
-
-afirmacao:["A implementação de políticas de conservação
-
+                afirmacao:["A implementação de políticas de conservação
 ambiental é crucial para combater as mudanças climáticas. ",
-"Essas políticas incluem a proteção de
-
+                          "Essas políticas incluem a proteção de
 florestas, áreas úmidas e biodiversidade."
-
-]
-},
-{
-texto: "c) Acordos internacionais como o Acordo de Paris",
-afirmacao: ["Acordos internacionais como o Acordo de Paris
-
+                ]
+            },
+            {
+                texto: "c) Acordos internacionais como o Acordo de Paris",
+                afirmacao: ["Acordos internacionais como o Acordo de Paris
 são essenciais para a ação climática global. ",
-
-"Esses acordos estabelecem metas para a redução
-
+                           "Esses acordos estabelecem metas para a redução
 das emissões de gases de efeito estufa."
-
-]
-},
-
-{
-texto: "d) Todas as opções acima",
-afirmacao: ["Todas as medidas mencionadas são importantes
-
+                ]
+            },
+            {
+                texto: "d) Todas as opções acima",
+                afirmacao: ["Todas as medidas mencionadas são importantes
 para mitigar as mudanças climáticas. ",
-
-"A cooperação internacional e o compromisso
-
+                           "A cooperação internacional e o compromisso
 contínuo são fundamentais para o sucesso."
-
-]
-}
-]
-}
+                ]
+            }
+        ]
+     }
 ];
+
+
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 function mostraPergunta() {
-if (atual >= perguntas.length) {
-mostraResultado();
-return;
-}
-perguntaAtual = perguntas[atual];
-caixaPerguntas.textContent = perguntaAtual.enunciado;
-caixaAlternativas.textContent = "";
-mostraAlternativas();
+    if (atual >= perguntas.length) {
+        mostraResultado();
+        return;
+    }
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent = "";
+    mostraAlternativas();
 }
 function mostraAlternativas() {
-for (const alternativa of perguntaAtual.alternativas) {
-const botaoAlternativas = document.createElement("button");
-botaoAlternativas.textContent = alternativa.texto;
-botaoAlternativas.addEventListener("click", () =>
+    for (const alternativa of perguntaAtual.alternativas) {
+         const botaoAlternativas = document.createElement("button");
+         botaoAlternativas.textContent = alternativa.texto;
+         botaoAlternativas.addEventListener("click", () =>
 respostaSelecionada(alternativa));
-caixaAlternativas.appendChild(botaoAlternativas);
+         caixaAlternativas.appendChild(botaoAlternativas);
+    }
 }
+function respostaSelecionada(opcaoSelecionada) {
+    const afirmacoes = opcaoSelecionada.afirmacao;
+    historiaFinal += afirmacoes + " ";
+    atual++;
+    mostraPergunta();
 }
+function mostraResultado() {
+    caixaPerguntas.textContent = "Obrigado por completar o quiz!";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+}
+mostraPergunta();
