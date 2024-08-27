@@ -5,33 +5,25 @@ const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 const perguntas = [
     {
-        enunciado: "Qual o seu nível de conhecimento sobre os impactos das
-mudanças climáticas em nosso cotidiano?",
+        enunciado: "Qual o seu nível de conhecimento sobre os impactos das mudanças climáticas em nosso cotidiano?",
         alternativas: [
             {
                 texto: "Baixo",
-                afirmacao:["Você está começando a aprender sobre os
-
-impactos das mudanças climáticas. ",
-                           "Continue explorando o tema para compreender
-melhor os desafios globais.”
+                afirmacao:["Você está começando a aprender sobre os impactos das mudanças climáticas. ",
+                           "Continue explorando o tema para compreender melhor os desafios globais.”
                 ]
             },
             {
                 texto: "Médio",
-                afirmacao: ["Você tem um conhecimento razoável sobre os
-impactos das mudanças climáticas.",
-                           "Com um pouco mais de estudo, você pode se
-tornar um defensor mais eficaz do meio ambiente."
+                afirmacao: ["Você tem um conhecimento razoável sobre os impactos das mudanças climáticas.",
+                           "Com um pouco mais de estudo, você pode se tornar um defensor mais eficaz do meio ambiente."
 
                 ]
              },
              {
                 texto: "Alto",
-                afirmacao: ["Você tem um conhecimento aprofundado sobre os
-impactos das mudanças climáticas. ",
-                           "Use esse conhecimento para liderar iniciativas
-e promover a conscientização em sua comunidade."
+                afirmacao: ["Você tem um conhecimento aprofundado sobre os impactos das mudanças climáticas. ",
+                           "Use esse conhecimento para liderar iniciativas e promover a conscientização em sua comunidade."
 
                 ]
              }
@@ -39,23 +31,18 @@ e promover a conscientização em sua comunidade."
     },
     {
 
-         enunciado: "1 - Quais são algumas das principais causas das
-mudanças climáticas?",
+         enunciado: "1 - Quais são algumas das principais causas das mudanças climáticas?",
          alternativas:
              {
                  texto: "a) Emissões de gases de efeito estufa",
-                 afirmacao:["As emissões de gases de efeito estufa são uma
-das principais causas das mudanças climáticas. ",
-                           "Reduzir essas emissões é essencial para mitigar
-os impactos futuros."
+                 afirmacao:["As emissões de gases de efeito estufa são uma das principais causas das mudanças climáticas. ",
+                           "Reduzir essas emissões é essencial para mitigar os impactos futuros."
                 ]
             },
             {
                   texto: "b) Desmatamento",
-                  afirmacao:["O desmatamento contribui significativamente
-para as mudanças climáticas. ",
-                           "Proteger as florestas é vital para manter o
-equilíbrio climático."
+                  afirmacao:["O desmatamento contribui significativamente para as mudanças climáticas. ",
+                           "Proteger as florestas é vital para manter o equilíbrio climático."
     ]
     },
     {
